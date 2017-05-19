@@ -1,0 +1,20 @@
+
+<div class="row" id="changeBG">
+  <div class="col-xs-12">
+    <app-items
+      (productAdded)="onProductAdded($event)"></app-items>
+    <hr>
+    <h3>Added Items</h3>
+    <ul class="list-group">
+      <a
+        class="list-group-item"
+        style="cursor: pointer"
+        *ngFor="let product of products; let i = index"
+      >
+         {{i + 1}} {{ product.name }} ({{ product.amount }})
+
+           <button class="btn btn-danger" type="button">Delete</button>
+    </a>
+    </ul>
+  </div>
+</div>
